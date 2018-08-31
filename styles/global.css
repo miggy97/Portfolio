@@ -14,7 +14,10 @@ body {
     max-width: 100%;
     max-height: 100%;
     overflow: auto;
-    background-color: royalblue;
+    background-image: url("../img/background2.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .card-center {
@@ -23,6 +26,7 @@ body {
     width: 80rem;
     /*Position and responsiveness*/
     position: absolute;
+    text-align: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -31,9 +35,97 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     /*Color*/
-    background-color: aliceblue;
+    background-color: white;
 }
 
 .card-center:hover {
-    padding: 2px 16px;
+    box-shadow: 10px 16px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    position: relative;
+    text-align: right;
+    height: 15rem;
+    width: 100%;
+}
+
+.header-background {
+    position: relative;
+    height: 15rem;
+    width: 100%;
+    background-color: #2B3036;
+    text-align: center;
+}
+
+.header-background::after {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: inherit;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    content: '';
+    transform-origin: top right;
+    transform: skewY(-3deg);
+}
+
+#name {
+    /*Position*/
+    position: absolute;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    left: 35%;
+    top: 40%;
+    bottom: 60%;
+    /*Style*/
+    font-family: 'Ubuntu Mono', monospace;
+    color: white;
+    font-size: 4.5rem;
+}
+
+.top {
+    position: absolute;
+    width: 100%;
+}
+
+.social {
+    position:  relative;
+    z-index: 1;
+    background-color: white;
+    width: 16%;
+    margin: 1rem;
+}
+
+.link {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    margin: 0.5rem;
+    z-index: 1;
+}
+
+/*#profile {
+    position: absolute;
+    border-radius: 50%;
+    
+    width: 20rem;
+    height: auto;
+    left: 5rem;
+    margin-top: -6rem;
+}*/
+
+.circle {
+    position: absolute;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    margin-left: 5rem;
+    margin-top: -3rem;
+    background-color: #2E3439;
+    border-style: solid;
+    border-width: 1rem;
+    border-color: white;
 }
